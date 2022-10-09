@@ -1,38 +1,55 @@
-
 public class Microwave {
+	// Initialize variable 
+	private int power = 1;
+	private int time = 0;
+	int timeBy30 = 30;
 
-	//public static void main(String[] args) {
-		
-
-	//}
-	private int powerInt() {
-		int power = 1;
-		
+	
+	 public String power() {
 		if(power == 1) {
 			power = 2;
 		}
 		else {
 			power = 1;
 		}
-		return power;
+		String powerButton = "Power Button was pressed. Power level is " + power;
+		
+		return powerButton;
 	}
 	
-	private int increaseTime() {
-		int time = 0;
-		int timeBy30 = 30;
+	public String time() {
 		time = time + timeBy30;
-		return time;
+		
+		String timeButton = "TimeButton was pressed. Time is " + time + " seconds";
+		
+		return timeButton;
+		
 	}
 	
-	public int resetAll() {
-		if(powerInt() != 0) {
-			powerInt() = 0;
+	public String reset() {
+		if(power != 1) {
+			power = 1;
 		}
-	}
+		if(time != 0) {
+			time = 0;
+		}
+		
+		String resetButton = "Reset Button was pressed. Power level is " + power + ". Time is " + time + " seconds";
+		
+		return resetButton;
+		
+		}
+
 	
-	public void printStuff() 
-	{
-		System.out.println(increaseTime());
-		System.out.println(powerInt());
+
+	public String start() {
+		
+		String startMessage = ("Cooking for " + time + " seconds at level "+ power + ".");
+		
+		return startMessage;
+		
+		
 	}
+
 }
+	
