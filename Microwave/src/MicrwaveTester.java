@@ -1,9 +1,17 @@
 
-public class MicrwaveTester {
+public class MicrowvaeTester {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
+		Microwave myMicrowave = new Microwave();
+		
+		System.out.println(myMicrowave.time());
+		System.out.println(myMicrowave.time());
+		
+		System.out.println(myMicrowave.power());
+		
+		System.out.println(myMicrowave.start());
+		
+		System.out.println(myMicrowave.reset());
+			}
 
 }
